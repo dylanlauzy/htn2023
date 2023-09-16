@@ -28,7 +28,7 @@ export default function Home() {
             <div className="float-left text-left w-2/4 text-4xl flex flex-wrap">
                 How would you describe your story?
                 <p className="float-left text-left w-2/4 text-sm mt-10">
-                  Select all that apply.
+                  Select at least three words.
                 </p>
               </div>
             <div className="float-left w-2/4 ">
@@ -36,7 +36,6 @@ export default function Home() {
               <Selectors list={THEMES}></Selectors>
               <button className="rounded-full w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8">
                 Next
-
               </button>
             </div>
         </div>
