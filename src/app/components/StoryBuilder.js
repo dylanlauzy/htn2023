@@ -25,7 +25,7 @@ const THEMES = [
   "Adventure"
 ]
 
-const Selectors = () => {  
+const StoryBuilder = () => {  
   let [list, setList] = useState(THEMES)
   const [selected, setSelected] = useState(new Set([]));
   const [subject, setSubject] = useState("");
@@ -69,4 +69,4 @@ const Selectors = () => {
   );
 };
 
-export default Selectors;
+export default StoryBuilder
