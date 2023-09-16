@@ -3,7 +3,6 @@ import axios from "axios";
 import { Suspense, useState } from "react";
 import TwoChoiceSelector from "./components/twoChoiceSelector";
 import StoryBuilder from "./components/StoryBuilder";
-import CohereGenerate from "./components/CohereGenerate";
 
 
 
@@ -34,39 +33,39 @@ const SCROLLS = ["Vertical", "Horizontal"];
 
 const READ = ["Left to Right", "Right to Left"];
 
-let practicePrompt = "Create a title and a manga story in the format: [Title] // [Story]"
+// let practicePrompt = "Create a title and a manga story in the format: [Title] // [Story]"
 
 
-const options = {
-  method: "POST",
-  url: "https://api.cohere.ai/v1/generate",
-  headers: {
-    accept: "application/json",
-    "content-type": "application/json",
-    authorization: "Bearer w2DD7JIkLyxtvA0zDcIgq5X9sM2HJoAWSxQAkre0",
-  },
-  data: {
-    max_tokens: 20,
-    truncate: "END",
-    return_likelihoods: "NONE",
-    prompt: practicePrompt,
-    temperature: 3.0,
-  },
-};
+// const options = {
+//   method: "POST",
+//   url: "https://api.cohere.ai/v1/generate",
+//   headers: {
+//     accept: "application/json",
+//     "content-type": "application/json",
+//     // authorization: "Bearer w2DD7JIkLyxtvA0zDcIgq5X9sM2HJoAWSxQAkre0",
+//   },
+//   data: {
+//     max_tokens: 20,
+//     truncate: "END",
+//     return_likelihoods: "NONE",
+//     prompt: practicePrompt,
+//     temperature: 3.0,
+//   },
+// };
 
 
 
 export default function Home() {
   const [story, setStory] = useState("");
 
-  axios
-    .request(options)
-    .then(function (response) {
-      setStory(response.data.generations[0].text);
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
+  // axios
+  //   .request(options)
+  //   .then(function (response) {
+  //     setStory(response.data.generations[0].text);
+  //   })
+  //   .catch(function (error) {
+  //     console.error(error);
+  //   });
 
   const [prompt, setPrompt] = useState("")
   const [wordCount, setWordCount] = useState(300);
@@ -93,7 +92,7 @@ export default function Home() {
 
   const promptHandler = () => {
     setPrompt(storyline + " " + "descriptiveWords")
-    CohereGenerate(practicePrompt)
+    
   }
 
 
@@ -179,7 +178,7 @@ export default function Home() {
           </div>
         </div>
         <div>
-          
+          {story}
         </div>
 
       </main>
