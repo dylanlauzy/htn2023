@@ -23,42 +23,21 @@ const THEMES = [
 
 export default function Home() {
     return (
-      <main className=" flex bg-bgcolor min-h-screen w-3/4  flex-col items-center justify-between p-24">
+      <main className=" flex bg-bgcolor min-h-screen w-full  flex-col items-center justify-between p-24">
         <div>
-            <div className="float-left text-left w-2/4 text-4xl">
+            <div className="float-left text-left w-2/4 text-4xl flex flex-wrap">
                 How would you describe your story?
                 <p className="float-left text-left w-2/4 text-sm mt-10">
                   Select all that apply.
                 </p>
               </div>
-<<<<<<< HEAD
-            <div className="float-left w-2/4 flex flex-wrap">
-              <div className="rounded-full border-2 border-htnblack w-1/4 p-2">
-
-              </div>
-              <Selectors name="Thriller"></Selectors>
-              <Selectors name="Mystery"></Selectors>
-              <Selectors name="Shōjo"></Selectors>
-              <Selectors name="Romance"></Selectors>
-              <Selectors name="Slice of Life"></Selectors>
-              <Selectors name="Horror"></Selectors>
-              <Selectors name="Mecha"></Selectors>
-              <Selectors name="Comedy"></Selectors>
-              <Selectors name="Josei"></Selectors>
-              <Selectors name="Shonen"></Selectors>
-              <Selectors name="Kodomo"></Selectors>
-              <Selectors name="Yaoi"></Selectors>
-              <Selectors name="Jujutsu Kaisen"></Selectors>
-              <Selectors name="Gegika"></Selectors>
-              <Selectors name="Harem"></Selectors>
-              <Selectors name="Kodomomuke"></Selectors>
-              <Selectors name="Seinen"></Selectors>
-              <Selectors name="Adventure"></Selectors>
-=======
             <div className="float-left w-2/4 ">
               <input type="text" className=" w-full p-2 m-1 border-2 rounded-full  border-htnblack border-md"></input>
               <Selectors list={THEMES}></Selectors>
->>>>>>> f54958d37aa93817d9251f94035524af56e480c4
+              <button className="rounded-full w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8">
+                Next
+
+              </button>
             </div>
         </div>
         
