@@ -29,9 +29,9 @@ export default function Home() {
     }
     return (
         <main className="flex items-start bg-bgcolor min-h-screen w-full flex-wrap  justify-between p-24">
-            <div className=" w-2/4 text-4xl flex flex-wrap">
+            <div className=" w-2/4 text-4xl flex flex-wrap font-semibold">
                 Additional Details
-                <p className="text-xl">(This is optional)</p>
+                <p className="text-lg text-gray-500 mt-3 m:mt-10 font-medium">(This is optional)</p>
             </div>
             <div className="float-left w-2/4">
                 <p className="text-[20px] my-3">
@@ -46,6 +46,9 @@ export default function Home() {
                     Reading from:
                 </p>
                 <TwoChoiceSelector pair={READ} preference={readSelection}></TwoChoiceSelector>
+                <button className="rounded-full text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8">
+                    Generate story
+                    </button>
             </div>
         </main>
     )
