@@ -2,6 +2,7 @@
 import TwoChoiceSelector from "../components/twoChoiceSelector"
 import { useState } from "react"
 
+
 const SCROLLS = [
     "Vertical",
     "Horizontal",
