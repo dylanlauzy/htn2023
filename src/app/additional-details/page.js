@@ -2,8 +2,6 @@
 import TwoChoiceSelector from "../components/twoChoiceSelector"
 import { useState } from "react"
 
-//test
-
 const SCROLLS = [
     "Vertical",
     "Horizontal",
@@ -29,7 +27,7 @@ export default function Home() {
     }
     return (
         <main className="flex items-start bg-bgcolor min-h-screen w-full flex-wrap  justify-between p-24">
-            <div className=" w-2/4 text-4xl flex flex-wrap font-semibold">
+            <div className=" w-2/4 text-4xl flex flex-col font-semibold">
                 Additional Details
                 <p className="text-lg text-gray-500 mt-3 m:mt-10 font-medium">(This is optional)</p>
             </div>
