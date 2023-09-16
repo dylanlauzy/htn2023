@@ -28,8 +28,9 @@ export default function Home() {
     }
     return (
         <main className="flex items-start bg-bgcolor min-h-screen w-full flex-wrap  justify-between p-24">
-            <div className=" w-2/4 text-4xl flex flex-wrap">
+            <div className=" w-2/4 text-4xl flex flex-col">
                 Additional Details
+                
                 <p className="text-xl">(This is optional)</p>
             </div>
             <div className="float-left w-2/4">
