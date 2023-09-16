@@ -3,6 +3,7 @@ import axios from "axios";
 import { Suspense, useState } from "react";
 import TwoChoiceSelector from "./components/twoChoiceSelector";
 import StoryBuilder from "./components/StoryBuilder";
+import Link from "next/link";
 
 
 
@@ -114,14 +115,14 @@ export default function Home() {
               placeholder="A mystery/thriller manga that starts with a dark scene in Shibuya..."
               onChange={(e) => setStoryline(e.target.value)}
             ></textarea>
-            <button class="float-right w-3/4 mt-3 ml-10 p-2 rounded-full bg-htnblack text-htnwhite">
+            <a href="#categories" className="text-center float-right w-3/4 mt-3 ml-10 p-2 rounded-full bg-htnblack text-htnwhite">
               Next
-            </button>
+            </a>
           </div>
         </div>
       </main>
       {/* Categories */}
-      <main className=" flex bg-bgcolor min-h-screen w-full  flex-col items-center justify-between p-24">
+      <main id="categories" className=" flex bg-bgcolor min-h-screen w-full  flex-col items-center justify-between p-24">
         <div>
           <div className="float-left text-left w-2/4 text-4xl flex flex-wrap font-semibold">
             How would you describe your story?
@@ -136,7 +137,7 @@ export default function Home() {
       </main>
 
       {/* ADDITIONAL DETAILS */}
-      <main className="flex items-start bg-bgcolor min-h-screen w-full flex-wrap  justify-between p-24">
+      <main id="additionalDetails" className="flex items-start bg-bgcolor min-h-screen w-full flex-wrap  justify-between p-24">
         <div className=" w-2/4 text-4xl flex flex-col font-semibold">
           Additional Details
           <p className="text-lg text-gray-500 mt-3 m:mt-10 font-medium">
@@ -163,9 +164,9 @@ export default function Home() {
             pair={READ}
             preference={readSelection}
           ></TwoChoiceSelector>
-          <button onClick={wordHandler} className="rounded-full text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8">
-            Generate story
-          </button>
+          <Link href="/results" onClick={wordHandler} >
+            <p className="rounded-full text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8">Generate story</p>
+          </Link>
         </div>
       </main>
 

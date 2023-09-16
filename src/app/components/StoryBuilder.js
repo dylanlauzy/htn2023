@@ -2,6 +2,7 @@
 import React from "react";
 import Selector from "./selector";
 import { useState } from "react";
+import Link from "next/link";
 
 //Transition to Set
 const THEMES = [
@@ -68,9 +69,9 @@ const StoryBuilder = ({descriptiveWords}) => {
             );
           })}
         </div>
-        <button onClick={clickHandler} className="rounded-full text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8">
-          Next
-        </button>
+        <a href="#additionalDetails" onClick={clickHandler} c>
+         <p className="rounded-full text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8"> Next</p> 
+        </a>
       </div>
     </>
   );
