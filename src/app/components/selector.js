@@ -1,38 +1,40 @@
-"use client"
-import React from 'react'
-import { useState } from 'react'
+"use client";
+import React from "react";
+import { useState } from "react";
 
-
-
-
-const Selectors = ({name, selected, setSelected}) => {
-  const [isSelected, setIsSelected] = useState(false)
+const Selector = ({ name, selected, setSelected }) => {
+  const [isSelected, setIsSelected] = useState(selected.has(name));
 
   const clickHandler = (e) => {
-    if(selected.has(name)) {
-      selected.delete(name)
+    if (selected.has(name)) {
+      selected.delete(name);
     } else {
-      selected.add(name)
+      selected.add(name);
     }
-    setSelected(selected)
-    setIsSelected(!isSelected)
-  }
-  
+    setSelected(selected);
+    setIsSelected(!isSelected);
+  };
 
   return (
     <div>
-
       {
-      <button onClick={clickHandler} className={`rounded-full border-2 border-htnblack 
-      ${(isSelected == true) 
-        ? "bg-htnblack text-htnwhite" 
-        : "bg-htnwhite text-htnblack"} 
-        p-2 hover:bg-htnblack hover:text-htnwhite transition-all duration-300 m-1`}>
-      {name}
-      </button>
+        <button
+          onClick={clickHandler}
+          className={`${
+            name == "" ? "hidden" : "visible"
+          } transition-all font-medium text-lg rounded-full border-2 border-htnblack 
+      ${
+        isSelected == true
+          ? "bg-htnblack text-htnwhite"
+          : "bg-htnwhite text-htnblack"
+      } 
+        p-2 px-4 hover:bg-htnblack hover:text-htnwhite transition-all duration-300 m-1`}
+        >
+          {name}
+        </button>
       }
     </div>
-  )
-}
+  );
+};
 
-export default Selectors
+export default Selector;
