@@ -12,6 +12,9 @@ export default function Home() {
                 </p>
               </div>
             <div className="float-left w-2/4 flex flex-wrap">
+              <div className="rounded-full border-2 border-htnblack w-1/4 p-2">
+
+              </div>
               <Selectors name="Thriller"></Selectors>
               <Selectors name="Mystery"></Selectors>
               <Selectors name="Shōjo"></Selectors>
