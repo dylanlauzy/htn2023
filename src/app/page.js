@@ -2,21 +2,21 @@
 import axios from 'axios'
 import { useState } from 'react';
 
-// comment
+
 const options = {
   method: 'POST',
   url: 'https://api.cohere.ai/v1/generate',
   headers: {
     accept: 'application/json',
     'content-type': 'application/json',
-    // authorization: 'Bearer pfEcNtJIIktaZmCEcnlbKBSAnadP6MAfPHrvQ9eM'
+    authorization: 'Bearer xmu3qEuTQgmNczjl6xqNJn5v4dGfx2BaJYwYJ1d3'
     
   },
   data: {
     max_tokens: 20,
     truncate: 'END',
     return_likelihoods: 'NONE',
-    prompt: 'write about about weather',
+    prompt: '',
     temperature: 1.0
   }
 };
