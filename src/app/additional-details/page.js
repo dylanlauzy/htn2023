@@ -1,13 +1,13 @@
-import Selectors from "../components/selectors"
+import TwoChoiceSelector from "../components/TwoChoiceSelector"
 
-const SCROLLS =[
+const SCROLLS = [
     "Vertical",
-    "Horizontal"
+    "Horizontal",
 ]
 
 const READ = [
     "Left to Right",
-    "Right to Left"
+    "Right to Left",
 ]
 
 export default function Home() {
@@ -24,11 +24,11 @@ export default function Home() {
                 <p>
                     Scrolling direction:
                 </p>
-                <Selectors list={SCROLLS}></Selectors>
+                <TwoChoiceSelector pair={SCROLLS}></TwoChoiceSelector>
                 <p>
                     Reading from:
                 </p>
-                <Selectors list={READ}></Selectors>
+                <TwoChoiceSelector pair={READ}></TwoChoiceSelector>
             </div>
         </main>
     )
