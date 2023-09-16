@@ -101,10 +101,6 @@ export default function Home() {
     setDescriptiveWords(descriptiveWords);
   };
 
-  const promptHandler = () => {
-    setPrompt(storyline + " " + "descriptiveWords");
-  };
-
   return (
     <main className="bg-htnwhite scroll-smooth">
       {/* ABOUT PAGE */}
@@ -123,7 +119,7 @@ export default function Home() {
               placeholder="A mystery/thriller manga that starts with a dark scene in Shibuya..."
               onChange={(e) => setStoryline(e.target.value)}
             ></textarea>
-            <a href="#categories" className="text-center float-right w-3/4 mt-3 ml-10 p-2 rounded-full bg-htnblack text-htnwhite">
+            <a href="#categories" className="text-center float-right w-3/4 mt-3 ml-10 p-2 rounded-2xl bg-htnblack text-htnwhite">
               Next
             </a>
           </div>
@@ -176,24 +172,9 @@ export default function Home() {
             preference={readSelection}
           ></TwoChoiceSelector>
           <Link href="/results" onClick={wordHandler} >
-            <p className="rounded-full text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8">Generate story</p>
+            <p className="rounded-2xl text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8">Generate story</p>
           </Link>
         </div>
-      </main>
-
-      {/* Results */}
-      <main className=" flex justify-between border-y-2 min-h-screen w-full">
-        <div className="flex flex-col min-w-[22rem] text-4xl border-r-2 shadow-xl border-gray-200 px-6 my-4">
-          <div className="mb-12">Logo</div>
-          <h2>Title</h2>
-          <button
-            onClick={promptHandler}
-            className="rounded-full text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8"
-          >
-            Submit
-          </button>
-        </div>
-        <div>{story}</div>
       </main>
     </main>
   );

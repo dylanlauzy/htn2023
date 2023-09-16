@@ -70,7 +70,7 @@ const StoryBuilder = ({descriptiveWords}) => {
           })}
         </div>
         <a href="#additionalDetails" onClick={clickHandler} c>
-         <p className="rounded-full text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8"> Next</p> 
+         <p className="rounded-2xl text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8"> Next</p> 
         </a>
       </div>
     </>
