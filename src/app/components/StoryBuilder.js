@@ -25,7 +25,7 @@ const THEMES = [
   "Adventure"
 ]
 
-const StoryBuilder = () => {  
+const StoryBuilder = ({descriptiveWords}) => {  
   let [list, setList] = useState(THEMES)
   const [selected, setSelected] = useState(new Set([]));
   const [subject, setSubject] = useState("");
@@ -37,6 +37,13 @@ const StoryBuilder = () => {
       e.target.value = ""
     }
   }
+
+  const clickHandler = () => {
+    descriptiveWords(selected)
+    console.log(selected)
+  }
+
+
 
   return (
     <>
@@ -61,7 +68,7 @@ const StoryBuilder = () => {
             );
           })}
         </div>
-        <button className="rounded-full text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8">
+        <button onClick={clickHandler} className="rounded-full text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8">
           Next
         </button>
       </div>
