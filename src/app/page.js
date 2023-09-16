@@ -1,5 +1,6 @@
+"use client"
 import axios from 'axios'
-
+import { useState } from 'react';
 
 
 const options = {
@@ -20,22 +21,24 @@ const options = {
   }
 };
 
-axios
+
+export default function Home() {
+  const [out, setOut] = useState("")
+
+  axios
   .request(options)
   .then(function (response) {
-    console.log(response.data);
-    out = response.data
+    setOut(response.data.generations[0].text)
   })
   .catch(function (error) {
     console.error(error);
 });
 
-export default function Home() {
+  console.log(out)
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        test
-        {out}
+
     </main>
   )
 }
