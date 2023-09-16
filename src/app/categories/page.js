@@ -1,41 +1,17 @@
 import StoryBuilder from "../components/StoryBuilder"
 
-//Transition to Set
-const THEMES = [
-  "Thriller",
-  "Mystery",
-  "Shojo",
-  "Romance",
-  "Slice of Life",
-  "Horror",
-  "Mecha",
-  "Comedy",
-  "Josei",
-  "Shonen",
-  "Kodomo",
-  "Yaoi",
-  "Jujutsu Kaisen",
-  "Gegika",
-  "Harem",
-  "Kodomomuke",
-  "Seinen",
-  "Adventure"
-]
-
 export default function Home() {
 
 
     return (
-      <main className=" flex bg-bgcolor min-h-screen w-full  flex-col items-center justify-between p-24">
-        <div>
-            <div className="float-left text-left w-2/4 text-4xl flex flex-wrap">
+      <main className="flex bg-bgcolor min-h-screen w-full h-full flex-col items-center justify-between px-5 md:p-24">
+        <div className="m-auto flex flex-col md:flex-row">
+            <div className="md:w-2/4 text-4xl flex flex-col pr-6 font-semibold pb-4 m:pb-0">
                 How would you describe your story?
-                <p className="float-left text-left w-2/4 text-sm mt-10">
-                  Select at least three words.
-                </p>
+                <p className="text-left text-gray-500 text-lg mt-3 m:mt-10 font-medium">Select at least three words.</p>
               </div>
-            <div className="float-left w-2/4 ">
-              <StoryBuilder list={THEMES}></StoryBuilder>
+            <div className="float-left md:w-2/4 ">
+              <StoryBuilder></StoryBuilder>
             </div>
         </div>
         

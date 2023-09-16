@@ -1,4 +1,4 @@
-import Selectors from "../components/selectors"
+import Selectors from "../components/StoryBuilder"
 
 const SCROLLS =[
     "Vertical",
