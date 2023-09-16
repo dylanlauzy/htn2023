@@ -14,7 +14,7 @@ const Selectors = ({list}) => {
 
   return (
     <>
-    <input type="text" onChange={((e) => setSubject(e.target.value))} className=" w-full p-2 m-1 border-2 rounded-full  border-htnblack border-md"></input>
+    <input type="text" placeholder="Add descriptors" onChange={((e) => setSubject(e.target.value))} className=" w-full p-2 m-1 border-2 rounded-full  border-htnblack border-md"></input>
 
       <div>    
         <div className='flex flex-wrap'>

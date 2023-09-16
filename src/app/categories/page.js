@@ -1,6 +1,4 @@
-"use client"
 import StoryBuilder from "../components/StoryBuilder"
-import { useState } from "react"
 
 const THEMES = [
   "Thriller",
@@ -31,8 +29,8 @@ export default function Home() {
         <div>
             <div className="float-left text-left w-2/4 text-4xl flex flex-wrap">
                 How would you describe your story?
-                <p className="float-left stext-left w-2/4 text-sm mt-10">
-                  Select all that apply.
+                <p className="float-left text-left w-2/4 text-sm mt-10">
+                  Select at least three words.
                 </p>
               </div>
             <div className="float-left w-2/4 ">
