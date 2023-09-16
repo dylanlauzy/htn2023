@@ -9,7 +9,7 @@ const options = {
   headers: {
     accept: 'application/json',
     'content-type': 'application/json',
-    authorization: 'Bearer pfEcNtJIIktaZmCEcnlbKBSAnadP6MAfPHrvQ9eM'
+    // authorization: 'Bearer pfEcNtJIIktaZmCEcnlbKBSAnadP6MAfPHrvQ9eM'
     
   },
   data: {
