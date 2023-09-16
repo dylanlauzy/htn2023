@@ -23,9 +23,9 @@ const THEMES = [
 
 export default function Home() {
     return (
-      <main className=" flex bg-bgcolor min-h-screen w-3/4  flex-col items-center justify-between p-24">
+      <main className=" bg-bgcolor min-h-screen w-full items-center justify-between p-24">
         <div>
-            <div className="float-left text-left w-2/4 text-4xl">
+            <div className="float-left text-left w-3/4 text-4xl">
                 How would you describe your story?
                 <p className="float-left text-left w-2/4 text-sm mt-10">
                   Select all that apply.
