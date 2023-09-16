@@ -2,7 +2,7 @@
 import axios from 'axios'
 import { useState } from 'react';
 
-// comment
+
 const options = {
   method: 'POST',
   url: 'https://api.cohere.ai/v1/generate',
