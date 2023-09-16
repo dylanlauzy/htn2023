@@ -1,4 +1,6 @@
-import TwoChoiceSelector from "../components/TwoChoiceSelector"
+"use client"
+import TwoChoiceSelector from "../components/twoChoiceSelector"
+import { useState } from "react"
 
 const SCROLLS = [
     "Vertical",
@@ -7,10 +9,21 @@ const SCROLLS = [
 
 const READ = [
     "Left to Right",
-    "Right to Left",
+    "Right to Left"
+    
 ]
 
 export default function Home() {
+    const [scrollPreference, setScrollPreference] = useState(SCROLLS[0])
+    const [readPreference, setReadPreference] = useState(READ[0])
+
+    const scrollSelection = (preference) => {
+
+    }
+
+    const readSelection = () => {
+
+    }
     return (
         <main className="flex bg-bgcolor min-h-screen w-full flex-col items-center justify-between p-24">
             <div className="float-left text-left w-2/4 text-4xl flex flex-wrap">
@@ -24,11 +37,11 @@ export default function Home() {
                 <p>
                     Scrolling direction:
                 </p>
-                <TwoChoiceSelector pair={SCROLLS}></TwoChoiceSelector>
+                <TwoChoiceSelector pair={SCROLLS} preference={scrollSelection}></TwoChoiceSelector>
                 <p>
                     Reading from:
                 </p>
-                <TwoChoiceSelector pair={READ}></TwoChoiceSelector>
+                <TwoChoiceSelector pair={READ} preference={readSelection}></TwoChoiceSelector>
             </div>
         </main>
     )

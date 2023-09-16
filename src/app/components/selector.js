@@ -26,7 +26,7 @@ function Selector({ name, selected, setSelected }) {
       ${(isSelected == true)
           ? "bg-htnblack text-htnwhite"
           : "bg-htnwhite text-htnblack"} 
-        p-2 hover:bg-htnblack hover:text-htnwhite transition-all duration-300 m-1`}>
+        p-2 hover:bg-htnblack hover:text-htnwhite transition-all duration-250 m-1`}>
         {name}
       </button>}
     </div>

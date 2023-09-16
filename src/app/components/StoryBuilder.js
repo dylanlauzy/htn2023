@@ -3,7 +3,7 @@ import React from 'react'
 import Selector from './selector'
 import { useState} from 'react'
 
-const Selectors = ({list}) => {
+const StoryBuilder = ({list}) => {
   const [selected, setSelected] = useState(new Set([]));
   const [subject, setSubject] = useState("")
 
@@ -34,4 +34,4 @@ const Selectors = ({list}) => {
   )
 }
 
-export default Selectors
+export default StoryBuilder
