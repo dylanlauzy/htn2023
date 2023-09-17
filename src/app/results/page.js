@@ -1,5 +1,5 @@
 "use client"
-
+import Image from "next/image";
 import { useData } from "../components/ContextProvider";
 import axios from "axios";
 
@@ -66,7 +66,12 @@ const page = async () => {
   return (
     <main className=" flex justify-between border-y-2 min-h-screen w-full">
       <div className="flex flex-col w-1/2 border-r-2 shadow-xl border-gray-200 px-6 py-10">
-        <div className="mb-16">Logo</div>
+        <div className="mb-16"><Image
+        src="small_logo.gif"
+        width={100}
+        height={100}
+        alt="small_logo"
+        ></Image></div>
         <h2 className="text-4xl mb-6">{titles[0]}</h2>
         <textarea
           type="textarea"
