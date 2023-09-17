@@ -8,9 +8,6 @@ import Link from "next/link";
 import { useData } from "./components/ContextProvider";
 
 
-
-
-
 const THEMES = [
   "Thriller",
   "Mystery",
@@ -56,6 +53,7 @@ const READ = ["Left to Right", "Right to Left"];
 // };
 
 export default function Home() {
+  console.log(process.env.NEXT_PUBLIC_API_KEY)
   let {data, setData} = useData();
   // axios
   //   .request(options)
