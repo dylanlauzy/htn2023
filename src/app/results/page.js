@@ -57,7 +57,7 @@ const page = async () => {
 
   
   let titles = titleResult.split(",").map((s) => s.trim().slice(1, s.length - 2))
-  print(titles)
+
   console.log(titles)
 
   let summary = synopsisResult
