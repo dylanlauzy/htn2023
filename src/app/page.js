@@ -1,11 +1,12 @@
 "use client";
-import axios from "axios";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import TwoChoiceSelector from "./components/twoChoiceSelector";
 import StoryBuilder from "./components/StoryBuilder";
 import Link from "next/link";
-
+import Image from "next/image";
 import { useData } from "./components/ContextProvider";
+import { Main } from "next/document";
+
 
 
 const THEMES = [
@@ -33,36 +34,10 @@ const SCROLLS = ["Vertical", "Horizontal"];
 
 const READ = ["Left to Right", "Right to Left"];
 
-// let practicePrompt = "Create a title and a manga story in the format: [Title] // [Story]"
-
-// const options = {
-//   method: "POST",
-//   url: "https://api.cohere.ai/v1/generate",
-//   headers: {
-//     accept: "application/json",
-//     "content-type": "application/json",
-//     // authorization: "Bearer w2DD7JIkLyxtvA0zDcIgq5X9sM2HJoAWSxQAkre0",
-//   },
-//   data: {
-//     max_tokens: 20,
-//     truncate: "END",
-//     return_likelihoods: "NONE",
-//     prompt: practicePrompt,
-//     temperature: 3.0,
-//   },
-// };
 
 export default function Home() {
   console.log(process.env.NEXT_PUBLIC_API_KEY)
   let {data, setData} = useData();
-  // axios
-  //   .request(options)
-  //   .then(function (response) {
-  //     setStory(response.data.generations[0].text);
-  //   })
-  //   .catch(function (error) {
-  //     console.error(error);
-  //   });
 
   // first
   const [storyline, setStoryline] = useState(
@@ -113,8 +88,21 @@ export default function Home() {
 
   return (
     <main className="bg-htnwhite scroll-smooth">
+      {/* INTRODUCTION PAGE */}
+      <main className="flex flex-wrap items-end min-h-screen w-full justify-between p-24">
+        <div className="flex flex-col items-start float-left">
+        <Image
+          width={400} 
+          height={400} 
+          src="/plotgen.png"
+          alt="logo"
+          ></Image>
+          <p className="text-xl ml-[4.5rem] -mt-20 font-medium">Storytelling taken to new heights</p>
+        </div>
+      </main>
       {/* ABOUT PAGE */}
       <main className="flex items-start min-h-screen w-full flex-wrap justify-between p-24">
+      
         <div className="h-full m-auto">
           <div className="float-left text-left w-2/4 text-4xl flex flex-wrap font-semibold m-auto">
             Start writing or share your own storyline
