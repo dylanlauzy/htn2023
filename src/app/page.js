@@ -89,17 +89,11 @@ export default function Home() {
   return (
     <main className="bg-htnwhite scroll-smooth">
       {/* INTRODUCTION PAGE */}
-      <main className="flex flex-wrap items-end min-h-screen w-full justify-between p-24">
-        <div className="flex flex-col items-start float-left">
-        <Image
-          width={400} 
-          height={400} 
-          src="/plotgen.png"
-          alt="logo"
-          ></Image>
-          <p className="text-xl ml-[4.5rem] -mt-20 font-medium">Storytelling taken to new heights</p>
-        </div>
-      </main>
+      <div className="items-start float-left">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.451/build/spline-viewer.js"></script>
+        <spline-viewer loading-anim url="https://prod.spline.design/i0CY4bnK4MTIVN-H/scene.splinecode"></spline-viewer>
+      </div>
+      <div className="w-137 z-5 bg-bgcolor"></div>
       {/* ABOUT PAGE */}
       <main className="flex items-start min-h-screen w-full flex-wrap justify-between p-24">
       
