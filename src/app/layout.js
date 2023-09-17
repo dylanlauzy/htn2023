@@ -15,11 +15,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className='scroll-smooth'>
-      <Suspense fallback={<Loading/>}>
-        <ContextProvider>
-          <body className={inter.className}>{children}</body>
-        </ContextProvider>
-      </Suspense>
+        <body className={inter.className}>
+          <ContextProvider>
+            {children}
+          </ContextProvider>
+        </body>
     </html>
   )
 }
