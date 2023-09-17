@@ -2,6 +2,7 @@
 import React from "react";
 import Selector from "./selector";
 import { useState } from "react";
+import Link from "next/link";
 
 //Transition to Set
 const THEMES = [
@@ -25,7 +26,7 @@ const THEMES = [
   "Adventure"
 ]
 
-const StoryBuilder = () => {  
+const StoryBuilder = ({descriptiveWords}) => {  
   let [list, setList] = useState(THEMES)
   const [selected, setSelected] = useState(new Set([]));
   const [subject, setSubject] = useState("");
@@ -36,6 +37,11 @@ const StoryBuilder = () => {
       setSubject("")
       e.target.value = ""
     }
+  }
+
+  const clickHandler = () => {
+    descriptiveWords(selected)
+    console.log(selected)
   }
 
   return (
@@ -61,9 +67,9 @@ const StoryBuilder = () => {
             );
           })}
         </div>
-        <button className="rounded-full text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8">
-          Next
-        </button>
+        <a href="#additionalDetails" onClick={clickHandler} c>
+         <p className="rounded-2xl text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8"> Next</p> 
+        </a>
       </div>
     </>
   );
