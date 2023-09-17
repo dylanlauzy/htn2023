@@ -4,6 +4,7 @@ import { useData } from "../components/ContextProvider";
 import { useState, useEffect } from "react";
 import axios from "axios";
 const cohere = require('cohere-ai');
+import Link from "next/link";
 
 const API_URL = "https://api.cohere.ai/v1/generate"
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY
@@ -104,13 +105,18 @@ const page = () => {
   return (
     <main className=" flex justify-between border-y-2 min-h-screen w-full">
       <div className="flex flex-col w-1/2 border-r-2 shadow-xl border-gray-200 px-6 py-10">
-        <div className="mb-16"><Image
-        src="small_logo.gif"
-        width={100}
-        height={100}
-        alt="small_logo"
-        ></Image></div>
-        <h2 className="text-4xl mb-6">{titles[0]}</h2>
+        <div className="mb-16">
+          <Link href="/">
+          <Image
+          className="absolute -top-5 -left-24"
+          src="/small_logo.gif"
+          width={400}
+          height={400}
+          alt="small_logo"
+          ></Image>
+          </Link>
+          </div>
+        <h2 className="text-4xl mt-10 mb-6">{titles[0]}</h2>
         <textarea
         defaultValue={summary}
           type="textarea"
