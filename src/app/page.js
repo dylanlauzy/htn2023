@@ -73,7 +73,8 @@ export default function Home() {
   // second
   const [descriptiveWords, setDescriptiveWords] = useState(new Set([]));
 
-  // third
+  // third **USE MAXTOKENS FOR MAXTOKENS**
+  const [maxTokens, setMaxTokens] = useState(1380)
   const [wordCount, setWordCount] = useState(300);
 
   // fourth
@@ -84,9 +85,12 @@ export default function Home() {
 
   // last
   const [prompt, setPrompt] = useState("");
+  
+  
 
   const wordHandler = () => {
-    setWordCount(wordCount / 4.6);
+    setWordCount(wordCount);
+    setMaxTokens(wordCount * 4.6)
   };
 
   const scrollSelection = (preference) => {
