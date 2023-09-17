@@ -36,8 +36,7 @@ const READ = ["Left to Right", "Right to Left"];
 
 
 export default function Home() {
-  console.log(process.env.NEXT_PUBLIC_API_KEY)
-  let {data, setData} = useData();
+  let { setData } = useData();
 
   // first
   const [storyline, setStoryline] = useState(
