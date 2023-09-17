@@ -87,7 +87,7 @@ export default function Home() {
   }
 
   return (
-    <main className="bg-htnwhite scroll-smooth">
+    <main className="bg-htnwhite scroll-smooth overflow-hidden">
       {/* INTRODUCTION PAGE */}
       <div className="items-start float-left">
         <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.451/build/spline-viewer.js"></script>
