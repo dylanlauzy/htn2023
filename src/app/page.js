@@ -5,6 +5,8 @@ import TwoChoiceSelector from "./components/twoChoiceSelector";
 import StoryBuilder from "./components/StoryBuilder";
 import Link from "next/link";
 
+import { useData } from "./components/ContextProvider";
+
 
 
 
@@ -54,8 +56,7 @@ const READ = ["Left to Right", "Right to Left"];
 // };
 
 export default function Home() {
-  const [story, setStory] = useState("");
-
+  let {data, setData} = useData();
   // axios
   //   .request(options)
   //   .then(function (response) {
@@ -85,8 +86,6 @@ export default function Home() {
 
   // last
   const [prompt, setPrompt] = useState("");
-  
-  
 
   const wordHandler = () => {
     setWordCount(wordCount);
@@ -105,6 +104,15 @@ export default function Home() {
     setDescriptiveWords(descriptiveWords);
   };
 
+  const submitHandler = () => {
+    wordHandler();
+    setData({
+      description: storyline,
+      genres: [...descriptiveWords],
+      maxTokens: maxTokens
+    })
+  }
+
   return (
     <main className="bg-htnwhite scroll-smooth">
       {/* ABOUT PAGE */}
@@ -117,7 +125,7 @@ export default function Home() {
             <textarea
               id="message"
               rows="4"
-              class="flex p-2.5 float-right w-3/4 ml-10 h-max
+              className="flex p-2.5 float-right w-3/4 ml-10 h-max
                 resize-y overflow-x-clip box-border text-sm text-gray-900 rounded-lg border border-gray-300 
                 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black rows-10 col-30 "
               placeholder="A mystery/thriller manga that starts with a dark scene in Shibuya..."
@@ -175,7 +183,7 @@ export default function Home() {
             pair={READ}
             preference={readSelection}
           ></TwoChoiceSelector>
-          <Link href="/results" onClick={wordHandler} >
+          <Link href="/results" onClick={submitHandler} >
             <p className="rounded-2xl text-center font-medium w-full p-2 bg-htnblack border-2 border-htnblack m-1 text-htnwhite mt-8">Generate story</p>
           </Link>
         </div>

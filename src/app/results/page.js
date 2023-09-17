@@ -1,6 +1,10 @@
 "use client"
 
+import { useData } from "../components/ContextProvider";
+
 const page = () => {
+  let {data, setData} = useData()
+
   const promptHandler = () => {
     setPrompt(storyline + " " + "descriptiveWords");
   };

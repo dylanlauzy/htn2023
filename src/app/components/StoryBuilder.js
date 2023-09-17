@@ -44,8 +44,6 @@ const StoryBuilder = ({descriptiveWords}) => {
     console.log(selected)
   }
 
-
-
   return (
     <>
       <input
