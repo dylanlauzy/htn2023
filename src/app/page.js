@@ -82,7 +82,9 @@ export default function Home() {
     setData({
       description: storyline,
       genres: [...descriptiveWords],
-      maxTokens: maxTokens
+      maxTokens: maxTokens,
+      scrollPreference: scrollPreference,
+      readPreference: readPreference
     })
   }
 
